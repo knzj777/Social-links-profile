@@ -1,0 +1,150 @@
+:root {
+    --clr-primary-400: hsl(75, 94%, 57%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-700: hsl(0, 0%, 20%);
+    --clr-neutral-800: hsl(0, 0%, 12%);
+    --clr-neutral-900: hsl(0, 0%, 8%);
+
+    --ff-base: "Inter";
+
+    --fw-regular: 400;
+    --fw-bold: 600;
+    --fw-bolder: 700;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+body{
+    font-size: 14px;
+    font-family: var(--ff-base);    
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-900);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--clr-neutral-800);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 10px;  
+    width: 330px;
+    height: 510px;
+}
+
+.container img {
+    height: 15%;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+.container__name {
+    font-weight: var(--fw-bold);
+}
+
+.container__location {
+    color: var(--clr-primary-400);
+    font-weight: var(--fw-bold);
+    font-size: 0.75rem;
+}
+
+.container__about {
+    margin: 1rem 0 0.4rem 0;
+}
+ 
+.container__social li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    font-weight: var(--fw-bold);
+    background-color: var(--clr-neutral-700);
+    border-radius: 0.4rem;
+    margin: 0.75rem;
+    height: 2.6rem;
+    width: 18rem;
+}
+
+.container__social li:hover {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-800);
+    cursor: pointer;    
+}
+
+
+.attribution{
+    margin-top:1rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a{
+    color: var(--clr-primary-400);
+    text-decoration: none;   
+}
+
+@media (max-width: 350px) {
+    .container {
+        width: 90%;
+        height: 75%;
+    }
+
+    .container__social li {
+        width: 80vw;
+    }
+
+    .container__social {
+        margin-bottom: 1rem;
+    }
+
+    .container__about, .container__name, .container__location {
+        text-align: center;
+    }
+}
